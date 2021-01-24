@@ -1,0 +1,18 @@
+
+ALGORITHM sort-inser
+VAR
+    i,j,el:Integer;
+    tab : ARRAY_OF INTEGER[30];
+BEGIN
+  
+    END_FOR
+    FOR i FROM 1 TO (tab.length -1) STEP 1  DO
+        el:=tab[i];
+        j:=i;
+        WHILE (j>0) and (tab[j-1]>el) DO
+            tab[j-1]:=tab[j];              
+            j--;
+        END_WHILE
+        tab[j]:=el;
+    END_FOR
+END
